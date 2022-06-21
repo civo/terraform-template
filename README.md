@@ -12,7 +12,7 @@ Opinionated Template Repo for managing applications on a Civo Kubernetes cluster
    cp terraform.tfvars.example terraform.tfvars
    ```
 
-3. Update the variable in terraform.tfvars with your Civo API Key (Get your civo.com api key - https://dashboard.civo.com/security)
+3. Update the variable in terraform.tfvars with your Civo API Key (Get your civo.com API key from your account at https://dashboard.civo.com/security)
 
 4. Run `terraform init`
 
@@ -26,9 +26,9 @@ Opinionated Template Repo for managing applications on a Civo Kubernetes cluster
 
 7. Visit the nginx pod using the ingress 
 
-8. > TODO: a terraform kubernetes service with Traefik annotation pointed to the nginx deployment is required
+8. > TODO: a terraform Kubernetes service with Traefik annotation pointed to the nginx deployment is required
 
-## HLD
+## High-Level Design
 
 This is an overview of the infrastructure being managed by this repo.  
 
@@ -51,7 +51,7 @@ This is an overview of the infrastructure being managed by this repo.
 
 ## Contribution Guide
 
-> TBC
+Please see [CONTRIBUTING.md](contributing.md)
 
 ## Acknowledgements
 
