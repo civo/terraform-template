@@ -1,6 +1,6 @@
 # Create a firewall
 resource "civo_firewall" "firewall-ingress" {
-  name = "${var.cluster_name_prefix}firewall-ingress"
+  name                 = "${var.cluster_name_prefix}firewall-ingress"
   create_default_rules = false
 }
 

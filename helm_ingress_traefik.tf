@@ -6,10 +6,10 @@ resource "helm_release" "traefik_ingress" {
 
   create_namespace = true
   namespace        = "traefik"
-  
+
   set {
-   type = "string"
-    name = "service.annotations.kubernetes\\.civo\\.com/firewall-id"
+    type  = "string"
+    name  = "service.annotations.kubernetes\\.civo\\.com/firewall-id"
     value = civo_firewall.firewall-ingress.id
   }
 }
