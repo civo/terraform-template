@@ -1,6 +1,6 @@
 # terraform-template
 
-Opinionated Template Repo for managing applications on a [Civo Kubernetes](https://www.civo.com) cluster 
+Opinionated Template Repo for managing applications on a [Civo Kubernetes](https://www.civo.com) cluster. 
 
 ## Quick Start
 
