@@ -2,6 +2,32 @@
 
 Opinionated Template Repo for managing applications on a Civo Kubernetes cluster 
 
+## Quick Start
+
+1. Create a new git repo from this template
+
+2. Copy terraform.tfvars.example to terraform.tfvars
+
+   ```bash
+   cp terraform.tfvars.example terraform.tfvars
+   ```
+
+3. Update the variable in terraform.tfvars with your Civo API Key (Get your civo.com api key - https://dashboard.civo.com/security)
+
+4. Run `terraform init`
+
+5. Run `terraform apply`
+
+6. Check the state of the pods in the cluster using: 
+
+   ```yaml
+   KUBECONFIG=`pwd`/kubeconfig kubectl get po -A
+   ```
+
+7. Visit the nginx pod using the ingress 
+
+8. > TODO: a terraform kubernetes service with Traefik annotation pointed to the nginx deployment is required
+
 ## HLD
 
 This is an overview of the infrastructure being managed by this repo.  
