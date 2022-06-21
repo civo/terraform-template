@@ -1,6 +1,6 @@
 # terraform-template
 
-Opinionated Template Repo for managing applications on a Civo Kubernetes cluster 
+Opinionated Template Repo for managing applications on a [Civo Kubernetes](https://www.civo.com) cluster 
 
 ## Quick Start
 
@@ -40,11 +40,12 @@ This is an overview of the infrastructure being managed by this repo.
 * https://registry.terraform.io/providers/hashicorp/helm/2.6.0
 * https://registry.terraform.io/providers/hashicorp/kubernetes/2.11.0
 * https://registry.terraform.io/providers/hashicorp/local/2.2.3
+
 ## Variables
 
 | Name | Type | Description | Default |
 |------|------|-------------|---------|
-| civo_token | string | API Token for civo.com | "" | 
+| civo_token | string | API Token for civo.com | "" |
 | kubernetes_api_access |  list | list of IP addresses / subnets to allow access to the cluster api | [ "0.0.0.0/0" ] |
 | cluster_web_access | list | list of IP addresses / subnets to allow access to port 80 | [ "0.0.0.0/0" ] |
 | cluster_websecure_access | list | list of IP addresses / subnets to allow access to port 443 | [ "0.0.0.0/0" ] |
@@ -55,5 +56,5 @@ Please see [CONTRIBUTING.md](contributing.md)
 
 ## Acknowledgements
 
-- https://www.hashicorp.com
-- https://github.com/excalidraw/excalidraw
+- [Hashicorp](https://www.hashicorp.com)
+- [Excalidraw](https://github.com/excalidraw/excalidraw)
