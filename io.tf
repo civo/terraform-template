@@ -17,7 +17,7 @@ variable "cluster_node_count" {
 
 # Firewall Access
 
-variable "kuberentes_api_access" {
+variable "kubernetes_api_access" {
   type    = list(any)
   default = ["0.0.0.0/0"]
 }

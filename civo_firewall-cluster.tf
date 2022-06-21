@@ -9,7 +9,7 @@ resource "civo_firewall_rule" "kubernetes" {
   protocol    = "tcp"
   start_port  = "6443"
   end_port    = "6443"
-  cidr        = var.kuberentes_api_access
+  cidr        = var.kubernetes_api_access
   label       = "kubernetes-api-server"
   action      = "allow"
   direction   = "ingress"
