@@ -32,9 +32,3 @@ variable "cluster_websecure_access" {
   default = ["0.0.0.0/0"]
 }
 
-# Output
-
-output "lb-firewall" {
-  value = civo_firewall.firewall-ingress.id
-
-}
