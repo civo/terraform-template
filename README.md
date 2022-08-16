@@ -46,6 +46,7 @@ This is an overview of the infrastructure being managed by this repo.
 | Name | Type | Description | Default |
 |------|------|-------------|---------|
 | civo_token | string | API Token for civo.com | "" |
+| region | string | The Civo Region to provision against | FRA1 |
 | kubernetes_api_access |  list | list of IP addresses / subnets to allow access to the cluster api | [ "0.0.0.0/0" ] |
 | cluster_web_access | list | list of IP addresses / subnets to allow access to port 80 | [ "0.0.0.0/0" ] |
 | cluster_websecure_access | list | list of IP addresses / subnets to allow access to port 443 | [ "0.0.0.0/0" ] |

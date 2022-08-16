@@ -29,7 +29,7 @@ terraform {
 # Configure the Civo Provider
 provider "civo" {
   token  = var.civo_token
-  region = "FRA1"
+  region = var.region
 }
 
 provider "helm" {
