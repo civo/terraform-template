@@ -3,7 +3,7 @@ terraform {
     #  User to provision resources (firewal / cluster) in civo.com
     civo = {
       source  = "civo/civo"
-      version = "1.0.18"
+      version = "1.0.21"
     }
 
     # Used to output the kubeconfig to the local dir for local cluster access

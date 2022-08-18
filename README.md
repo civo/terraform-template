@@ -36,7 +36,7 @@ This is an overview of the infrastructure being managed by this repo.
 
 ## Terraform Provider Documentation
 
-* https://registry.terraform.io/providers/civo/civo/1.0.18
+* https://registry.terraform.io/providers/civo/civo/1.0.21
 * https://registry.terraform.io/providers/hashicorp/helm/2.6.0
 * https://registry.terraform.io/providers/hashicorp/kubernetes/2.11.0
 * https://registry.terraform.io/providers/hashicorp/local/2.2.3
