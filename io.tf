@@ -40,4 +40,3 @@ variable "cluster_websecure_access" {
 }
 
 # Output
-
