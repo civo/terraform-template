@@ -1,6 +1,6 @@
 # terraform-template
 
-Opinionated Template Repo for managing applications on a [Civo Kubernetes](https://www.civo.com) cluster. 
+Opinionated Template Repo for managing applications on a [Civo Kubernetes](https://www.civo.com) cluster.
 
 ## Quick Start
 
@@ -18,19 +18,19 @@ Opinionated Template Repo for managing applications on a [Civo Kubernetes](https
 
 5. Run `terraform apply`
 
-6. Check the state of the pods in the cluster using: 
+6. Check the state of the pods in the cluster using:
 
    ```yaml
    KUBECONFIG=`pwd`/kubeconfig kubectl get po -A
    ```
 
-7. Visit the nginx pod using the ingress 
+7. Visit the nginx pod using the ingress
 
 8. > TODO: a terraform Kubernetes service with Traefik annotation pointed to the nginx deployment is required
 
 ## High-Level Design
 
-This is an overview of the infrastructure being managed by this repo.  
+This is an overview of the infrastructure being managed by this repo.
 
 ![HLD](./hld.excalidraw.png)
 
@@ -55,7 +55,33 @@ This is an overview of the infrastructure being managed by this repo.
 
 Please see [CONTRIBUTING.md](contributing.md)
 
+
+### Development Setup
+
+While this is a template repository, it can be checked out and contributed to
+as a bare git repo. As such, making changes to this is as simple as a git clone
+and following the `Quick Start` steps above.
+
+
+**Testing**
+
+Testing of the base assets have been added using `teratest`  by gruntwork.
+
+```
+> go test -v .
+=== RUN   TestCluster
+....
+--- PASS: TestCluster (172.23s)
+PASS
+ok  	github.com/civo/terraform-template	172.589s
+```
+
+This will provision real resources and run tests against them (e.g. ensuring
+the number of nodes requested have been created correctly). Resources will
+automatically be cleaned up at the end of the test run.
+
 ## Acknowledgements
 
 - [Hashicorp](https://www.hashicorp.com)
 - [Excalidraw](https://github.com/excalidraw/excalidraw)
+- [Terratest](https://terratest.gruntwork.io)
