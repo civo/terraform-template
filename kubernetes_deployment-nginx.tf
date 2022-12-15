@@ -20,8 +20,16 @@ resource "kubernetes_deployment" "nginx" {
 
       spec {
         container {
-          image = "nginx:1.21.6"
+          image = "dmajrekar/nginx-echo:latest"
           name  = "nginx"
+          port {
+            protocol       = "TCP"
+            container_port = "8080"
+          }
+          port {
+            protocol       = "TCP"
+            container_port = "8443"
+          }
           resources {
             limits = {
               cpu    = "0.5"
@@ -31,21 +39,6 @@ resource "kubernetes_deployment" "nginx" {
               cpu    = "250m"
               memory = "50Mi"
             }
-          }
-
-          liveness_probe {
-            http_get {
-              path = "/"
-              port = 80
-
-              http_header {
-                name  = "X-Custom-Header"
-                value = "Awesome"
-              }
-            }
-
-            initial_delay_seconds = 3
-            period_seconds        = 3
           }
         }
       }

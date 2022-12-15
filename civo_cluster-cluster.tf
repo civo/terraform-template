@@ -1,4 +1,7 @@
 resource "civo_kubernetes_cluster" "cluster" {
+  timeouts {
+    create = "10m"
+  }
   name        = "${var.cluster_name_prefix}cluster"
   firewall_id = civo_firewall.firewall.id
   pools {
