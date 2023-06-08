@@ -6,6 +6,9 @@ resource "civo_kubernetes_cluster" "cluster" {
     size       = var.cluster_node_size
     # label = "my-pool-label" # This label will be set as an annotation on the nodes in the pool
   }
+  timeouts {
+    create = "5m"
+  }
 }
 
 resource "local_file" "cluster-config" {
