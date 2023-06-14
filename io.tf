@@ -43,6 +43,12 @@ variable "cluster_websecure_access" {
   default     = ["0.0.0.0/0"]
 }
 
+variable "object_store_enabled" {
+  description = "Should an object store be configured"
+  type = bool
+  default = false
+}
+
 variable "object_store_size" {
   description = "Size of the Object Store to create (multiples of 500)"
   type        = number
